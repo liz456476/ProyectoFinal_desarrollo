@@ -45,4 +45,17 @@ button {
 
 button:hover {
   background-color: #a26d4c;
+}     
+
+.error {
+    color: #cc0000; 
+    font-size: 0.85rem; 
+    margin: -5px 0 10px 0; 
+    text-align: left; 
+    font-weight: 500;
+}
+
+
+.form input[aria-invalid="true"] {
+    border-color: #cc0000; 
 }
