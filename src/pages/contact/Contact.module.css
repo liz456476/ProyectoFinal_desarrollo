@@ -35,3 +35,9 @@ button {
 button:hover {
   background-color: #a26d4c;
 }
+.error {
+    color: red;
+    font-size: 0.85em;
+    margin-top: 4px;
+    margin-bottom: 8px; /* O ajusta el espaciado según necesites */
+}
