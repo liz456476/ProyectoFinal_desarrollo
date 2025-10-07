@@ -1,9 +1,5 @@
-import React from "react";
-import { useForm } from "react-hook-form"; 
-import styles from "./Contact.module.css";
-
 function Contact() {
-  // 🚨 CAMBIO CLAVE: Configuración del useForm
+  
   const { 
     register, 
     handleSubmit, 
@@ -71,7 +67,7 @@ function Contact() {
           <textarea 
             placeholder="Mensaje (obligatorio, sin números, max 500)"
             {...register("mensaje", {
-                required: "El mensaje es obligatorio", // 🚨 Mensaje de campo obligatorio
+                required: "El mensaje es obligatorio", 
                 maxLength: {
                     value: 500,
                     message: "El mensaje no debe exceder los 500 caracteres"
