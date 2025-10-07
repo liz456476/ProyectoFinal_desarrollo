@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+Proyecto CRUD: Michi House (Gestión de Inventario y Contacto)
+Este proyecto es una aplicación web de inventario simple diseñada para la gestión de Mascotas en Adopción (CRUD) y la administración de Mensajes de Contacto, utilizando React.js y Firebase Firestore como base de datos en tiempo real.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Características Implementadas
+El proyecto cumple con los requisitos técnicos para demostrar el dominio de un stack moderno de React para aplicaciones de gestión de datos:
 
-## Available Scripts
+Característica	Detalle
+CRUD Completo	Capacidad para Crear, Leer, Actualizar y Eliminar registros de mascotas.
+Base de Datos	Conexión a la base de datos en tiempo real Firebase Firestore.
+Formularios Avanzados	Gestión de los formularios de Creación y Edición mediante la librería React Hook Form.
+Validaciones	Inclusión de validaciones declarativas (campos obligatorios, formato de URL, límites numéricos) y visualización de mensajes de error.
+Estilos	Uso de CSS Modules para la modularización de estilos y un diseño responsivo.
+Control de Acceso	Funcionalidad para alternar entre el modo 'Usuario' (solo lectura) y 'Administrador' (permite acciones CRUD).
+Navegación	Enrutamiento manejado por React Router DOM.
 
-In the project directory, you can run:
+Exportar a Hojas de cálculo
+🛠️ Guía de Instalación y Configuración Local
+Siga los siguientes pasos para levantar y ejecutar el proyecto en su entorno de desarrollo local.
 
-### `npm start`
+Prerrequisitos
+Node.js (versión 16 o superior)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm o yarn
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Una cuenta de Firebase con un proyecto configurado.
 
-### `npm test`
+Pasos
+Clonar el repositorio:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Bash
 
-### `npm run build`
+git clone https://docs.github.com/es/repositories
+cd nombre-del-repositorio
+Instalar dependencias:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Bash
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm install
+Configurar Variables de Entorno:
+a. Cree un archivo llamado .env en la raíz del proyecto.
+b. Inserte las credenciales de su proyecto de Firebase obtenidas desde la Consola de Firebase.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Fragmento de código
 
-### `npm run eject`
+REACT_APP_FIREBASE_API_KEY="SU_API_KEY"
+REACT_APP_FIREBASE_AUTH_DOMAIN="SU_AUTH_DOMAIN"
+REACT_APP_FIREBASE_PROJECT_ID="SU_PROJECT_ID"
+REACT_APP_FIREBASE_STORAGE_BUCKET="SU_STORAGE_BUCKET"
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID="SU_MESSAGING_SENDER_ID"
+REACT_APP_FIREBASE_APP_ID="SU_APP_ID"
+Iniciar el servidor de desarrollo:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Bash
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm start
+La aplicación se abrirá en http://localhost:3000.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+☁️ Despliegue en Vercel
+El proyecto está configurado para un Despliegue Automático mediante la integración de Vercel con GitHub. Una vez configuradas las Variables de Entorno en el Dashboard de Vercel, cada git push a la rama principal (generalmente main) activará una nueva construcción y despliegue del sitio en la URL pública.
