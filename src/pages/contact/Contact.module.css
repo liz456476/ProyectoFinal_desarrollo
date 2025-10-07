@@ -35,7 +35,8 @@ button {
 button:hover {
   background-color: #a26d4c;
 }
-.error {
+
+.error{
     color: red;
     font-size: 0.85em;
     margin-top: 4px;
