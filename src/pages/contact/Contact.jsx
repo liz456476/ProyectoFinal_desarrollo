@@ -1,21 +1,23 @@
+// src/pages/contact/Contact.jsx
+
+import React from 'react';
+import { useForm } from 'react-hook-form'; 
+import styles from './Contact.module.css'; 
+
 function Contact() {
-  
   const { 
     register, 
     handleSubmit, 
     formState: { errors, isSubmitting } 
   } = useForm({
-    // Valida cuando el usuario sale del campo
     mode: "onBlur", 
   });
 
-  // Patrón (regex) que NO permite dígitos (números) para campos de texto
   const NO_DIGITS_PATTERN = /^[^0-9]+$/;
 
   const onSubmit = (data) => {
-    // Aquí iría tu lógica de envío (axios.post, fetch, etc.)
     console.log("Datos a enviar (validados):", data);
-    alert("Mensaje enviado con éxito y validado por React Hook Form ✅");
+    alert("Mensaje enviado con éxito y validado por React Hook Form");
   };
 
   return (
@@ -30,7 +32,7 @@ function Contact() {
             placeholder="Nombre (obligatorio, sin números)" 
             type="text"
             {...register("nombre", { 
-              required: "El nombre es obligatorio", // 🚨 Mensaje de campo obligatorio
+              required: "El nombre es obligatorio", 
               minLength: {
                 value: 3,
                 message: "El nombre debe tener al menos 3 caracteres"
@@ -41,7 +43,6 @@ function Contact() {
               }
             })} 
           />
-          {/* Muestra el error */}
           {errors.nombre && <p className={styles.error}>{errors.nombre.message}</p>}
         </div>
 
@@ -51,14 +52,13 @@ function Contact() {
             placeholder="Email (obligatorio, formato válido)" 
             type="email"
             {...register("email", { 
-              required: "El email es obligatorio", // 🚨 Mensaje de campo obligatorio
+              required: "El email es obligatorio", 
               pattern: {
                 value: /^\S+@\S+\.\S+$/, 
                 message: "El formato del email no es válido"
               }
             })} 
           />
-          {/* Muestra el error */}
           {errors.email && <p className={styles.error}>{errors.email.message}</p>}
         </div>
 
@@ -78,7 +78,6 @@ function Contact() {
                 }
             })}
           ></textarea>
-          {/* Muestra el error */}
           {errors.mensaje && <p className={styles.error}>{errors.mensaje.message}</p>}
         </div>
 
