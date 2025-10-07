@@ -1,0 +1,48 @@
+/* src/pages/edit-pet/EditPet.module.css */
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f8f4ec;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #8b5e3c;
+  margin-bottom: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #d3bfa3;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #a26d4c;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #8b5e3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #a26d4c;
+}
