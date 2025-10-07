@@ -7,6 +7,7 @@ import PetForm from "./pages/pet-form/PetForm";
 import PetDetail from "./pages/pet-detail/PetDetail";
 import Contact from "./pages/contact/Contact";
 import EditPet from "./pages/edit-pet/EditPet";
+import Footer from "./components/Footer/Footer";
 import { UserProvider } from "./context/UserContext";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/edit/:id" element={<EditPet />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer/>
       </Router>
     </UserProvider>
   );
